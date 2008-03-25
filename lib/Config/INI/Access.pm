@@ -1,7 +1,7 @@
 package Config::INI::Access;
 
 use vars qw ($VERSION);
-$VERSION = '0.99';
+$VERSION = '0.999';
 
 use strict;
 use Config::INI::Reader;

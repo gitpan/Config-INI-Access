@@ -2,7 +2,7 @@ use Test::More qw(no_plan);
 
 use Config::INI::Access;
 
-ok(7 == config->load('config.ini'), 'Reading config file');
+ok(7 == config->load('t/config.ini'), 'Reading config file');
 
 ok(config->globalA eq 'value A', 'Global key value');
 ok(config->globalB eq 'value B', 'Global key value');

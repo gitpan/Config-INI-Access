@@ -1,7 +1,7 @@
 package Config::INI::Access;
 
 use vars qw ($VERSION);
-$VERSION = '0.999';
+$VERSION = '0.9999';
 
 use strict;
 use Config::INI::Reader;
@@ -123,11 +123,19 @@ initial values.
 =head2 TODO
 
 This module should return C<undef> for attempts of reading the key that 
-does not exists.
-
+does not exists. Right now hash syntax may be used to learn out if the
+element does not exist:
+    
+    $unknown = config->non_existing if config->{'non_existing'};
+    $unknown = config->section->non_existing if config->section->{'non_existing'};
+ 
 =head1 AUTHOR
 
 Andrew Shitov, <andy@shitov.ru>
+
+=head2 THANKS
+
+Thanks to Ivan Serezhkin for helping with arrows, asterisks and packages--all the dark sides of Perl.
 
 =head1 COPYRIGHT AND LICENSE
 
